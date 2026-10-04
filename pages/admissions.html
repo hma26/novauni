@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to apply to NOVA University: the 5-step admission process, annual tuition cost calculator, scholarships, and admissions FAQ.">
+  <title>Admissions &amp; Financial Aid | NOVA University</title>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="admissions" data-root="../">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">Admissions &amp; Financial Aid</span>
+        <h1>Start Your Journey to NOVA</h1>
+        <p>Everything you need to know about application requirements, tuition estimates, scholarships, and enrollment deadlines.</p>
+      </div>
+    </section>
+
+    <!-- 5-step roadmap -->
+    <section class="section-sm section-white border-b">
+      <div class="container">
+        <div class="section-head section-head-sm">
+          <span class="eyebrow">5-Step Admission Process</span>
+          <h2>How to Apply in 5 Simple Steps</h2>
+        </div>
+        <div class="grid grid-5 grid-gap-4">
+          <div class="step-card">
+            <span class="num">01</span>
+            <h3>Choose Program</h3>
+            <p>Select your degree from our 55+ undergraduate &amp; graduate options.</p>
+          </div>
+          <div class="step-card">
+            <span class="num">02</span>
+            <h3>Prepare Transcripts</h3>
+            <p>Gather academic transcripts, essays, and optional test scores.</p>
+          </div>
+          <div class="step-card">
+            <span class="num">03</span>
+            <h3>Submit Online</h3>
+            <p>Complete the online pre-application portal in under 10 minutes.</p>
+          </div>
+          <div class="step-card">
+            <span class="num">04</span>
+            <h3>Financial Aid</h3>
+            <p>Submit scholarship requests and income documentation.</p>
+          </div>
+          <div class="step-card">
+            <span class="num">05</span>
+            <h3>Receive Decision</h3>
+            <p>Accept your letter of admission and reserve your spot!</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <button type="button" class="btn btn-navy-gold btn-xl" data-action="open-apply"><i data-icon="send" class="ic ic-4"></i> Start Application Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tuition calculator -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-head section-head-sm">
+          <span class="eyebrow">Tuition Estimator</span>
+          <h2 class="with-icon"><i data-icon="calculator" class="ic ic-8 text-blue"></i> Annual Cost Calculator</h2>
+          <p>Estimate your annual tuition, housing, and meal plan costs instantly.</p>
+        </div>
+
+        <div class="calc-grid">
+          <!-- Inputs -->
+          <div class="calc-panel">
+            <h3>1. Select Your Student Profile</h3>
+            <div class="calc-fields">
+              <div>
+                <label class="form-label">Degree Level</label>
+                <div class="option-grid" data-calc="degree">
+                  <button type="button" class="option-btn active" data-value="Undergraduate">Undergraduate</button>
+                  <button type="button" class="option-btn" data-value="Graduate">Graduate</button>
+                  <button type="button" class="option-btn" data-value="Doctorate">Doctorate</button>
+                  <button type="button" class="option-btn" data-value="Executive">Executive</button>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Residency Status</label>
+                <div class="option-grid option-grid-3" data-calc="residency">
+                  <button type="button" class="option-btn" data-value="In-State">In-State</button>
+                  <button type="button" class="option-btn active" data-value="Out-of-State">Out-of-State</button>
+                  <button type="button" class="option-btn" data-value="International">International</button>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Housing Preference</label>
+                <div class="option-grid option-grid-3" data-calc="housing">
+                  <button type="button" class="option-btn active" data-value="Shared">Dorm Shared ($5.7k)</button>
+                  <button type="button" class="option-btn" data-value="Studio">Studio Room ($8.4k)</button>
+                  <button type="button" class="option-btn" data-value="Off-Campus">Off-Campus ($0)</button>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Meal Plan Option</label>
+                <div class="option-grid option-grid-3" data-calc="meal">
+                  <button type="button" class="option-btn active" data-value="Unlimited">Unlimited Dining ($3.8k)</button>
+                  <button type="button" class="option-btn" data-value="Partial">10 Meals/Wk ($2.2k)</button>
+                  <button type="button" class="option-btn" data-value="None">No Meal Plan ($0)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live summary -->
+          <div class="calc-summary">
+            <h3>Estimated Annual Cost Breakdown</h3>
+            <div class="calc-lines">
+              <div class="calc-line"><span>Base Tuition (<span id="calc-degree-label">Undergraduate</span>)</span><span id="calc-tuition">$0</span></div>
+              <div class="calc-line"><span>Campus Housing (<span id="calc-housing-label">Shared</span>)</span><span id="calc-housing">$0</span></div>
+              <div class="calc-line"><span>Meal Plan (<span id="calc-meal-label">Unlimited</span>)</span><span id="calc-meal">$0</span></div>
+              <div class="calc-line"><span>Books &amp; University Services</span><span id="calc-books">$1,400</span></div>
+              <div class="calc-total">
+                <span class="lbl">Total Est. Annual Cost</span>
+                <span class="amt" id="calc-total">$0</span>
+              </div>
+            </div>
+            <div class="calc-note">
+              <div class="hl"><i data-icon="award" class="ic ic-4"></i> Eligible for Financial Aid &amp; Scholarships</div>
+              <p>82% of NOVA students receive grants or scholarships that reduce this total by an average of 45%.</p>
+            </div>
+            <button type="button" class="btn btn-amber btn-block btn-lg" data-action="open-apply">Apply for Scholarships &amp; Aid</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scholarships -->
+    <section class="section section-white border-b">
+      <div class="container">
+        <div class="section-head section-head-sm">
+          <span class="eyebrow">Scholarships &amp; Fellowships</span>
+          <h2>Featured NOVA Scholarships</h2>
+        </div>
+        <div class="grid grid-2 grid-gap-6" id="scholarships-grid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-light">
+      <div class="container container-md space-y-8">
+        <div class="text-center space-y-3">
+          <span class="eyebrow">Frequently Asked Questions</span>
+          <h2 class="section-title">Admissions FAQ</h2>
+        </div>
+        <div class="faq-filters" id="faq-filters">
+          <button type="button" class="filter-tab filter-tab-outline active" data-category="All">All</button>
+          <button type="button" class="filter-tab filter-tab-outline" data-category="Admissions">Admissions</button>
+          <button type="button" class="filter-tab filter-tab-outline" data-category="Financial Aid">Financial Aid</button>
+          <button type="button" class="filter-tab filter-tab-outline" data-category="International">International</button>
+          <button type="button" class="filter-tab filter-tab-outline" data-category="General">General</button>
+        </div>
+        <div class="faq-list" id="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/icons.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/admissions.js"></script>
+</body>
+</html>

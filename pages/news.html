@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest research news, achievements and press releases from NOVA University, plus upcoming campus events and lectures you can register for.">
+  <title>News &amp; Events | NOVA University</title>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="news" data-root="../">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">Newsroom &amp; Events</span>
+        <h1>NOVA University Dispatch</h1>
+        <p>Stay informed with academic research breakdowns, faculty awards, student club achievements, and upcoming guest lectures.</p>
+      </div>
+    </section>
+
+    <!-- Filter bar -->
+    <section class="filter-bar news-filter-bar">
+      <div class="container">
+        <div class="scroll-x" id="news-categories">
+          <button type="button" class="filter-tab active" data-category="All">All</button>
+          <button type="button" class="filter-tab" data-category="Research">Research</button>
+          <button type="button" class="filter-tab" data-category="Achievements">Achievements</button>
+          <button type="button" class="filter-tab" data-category="Innovation">Innovation</button>
+          <button type="button" class="filter-tab" data-category="Campus Life">Campus Life</button>
+        </div>
+        <div class="input-wrap">
+          <i data-icon="search" class="ic ic-4 ic-lead"></i>
+          <input type="text" id="news-search" class="input input-xs" placeholder="Search news & press...">
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles + events -->
+    <section class="section-sm">
+      <div class="container space-y-16">
+        <div>
+          <h2 class="subsection-title"><i data-icon="newspaper" class="ic ic-6 text-blue"></i> Featured Press &amp; Articles</h2>
+          <div class="grid grid-3" id="news-grid"></div>
+          <p class="text-sm text-slate-500 hidden" id="news-empty">No articles match your search.</p>
+        </div>
+
+        <div>
+          <h2 class="subsection-title"><i data-icon="calendar" class="ic ic-6 text-amber-600"></i> Upcoming Campus Events &amp; Symposia</h2>
+          <div class="event-list" id="events-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/icons.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/news.js"></script>
+</body>
+</html>

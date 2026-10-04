@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore NOVA University campus life: facilities, the campus photo gallery and virtual tour video, on-campus housing options, and 120+ student clubs.">
+  <title>Campus Life &amp; Housing | NOVA University</title>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="campus" data-root="../">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">Campus Life &amp; Housing</span>
+        <h1>A Vibrant Community to Call Home</h1>
+        <p>Explore 220 acres of green campus grounds, world-class athletic centers, state-of-the-art housing, and 120+ student clubs.</p>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Campus Infrastructure</span>
+          <h2>State-of-the-Art Student Facilities</h2>
+        </div>
+        <div class="grid grid-2" id="facilities-grid"></div>
+      </div>
+    </section>
+
+    <!-- Photo gallery slider -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Campus Gallery</span>
+          <h2>Life at NOVA in Pictures</h2>
+          <p>Swipe through highlights from around our 220-acre campus.</p>
+        </div>
+
+        <div class="gallery" id="campus-gallery" role="region" aria-roledescription="carousel" aria-label="Campus photo gallery">
+          <div class="gallery-viewport">
+            <div class="gallery-track" id="gallery-track"></div>
+          </div>
+          <button type="button" class="gallery-btn gallery-prev" id="gallery-prev" aria-label="Previous photo"><i data-icon="chevron-right" class="ic ic-6"></i></button>
+          <button type="button" class="gallery-btn gallery-next" id="gallery-next" aria-label="Next photo"><i data-icon="chevron-right" class="ic ic-6"></i></button>
+          <div class="gallery-dots" id="gallery-dots" role="tablist" aria-label="Choose photo"></div>
+        </div>
+
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+      </div>
+    </section>
+
+    <!-- Virtual tour video -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-copy">
+            <span class="eyebrow">Virtual Campus Tour</span>
+            <h2>Can’t Visit in Person? Take the Tour From Home.</h2>
+            <p>Walk through our lecture halls, research labs, residence halls and sports centre with a student ambassador as your guide.</p>
+            <ul class="check-list">
+              <li><i data-icon="check-circle" class="ic ic-5"></i><span><strong>Guided by students:</strong> hear first-hand what daily life on campus is like.</span></li>
+              <li><i data-icon="check-circle" class="ic ic-5"></i><span><strong>Captions included:</strong> the tour is subtitled for accessibility.</span></li>
+              <li><i data-icon="check-circle" class="ic ic-5"></i><span><strong>In-person tours:</strong> book a guided walking tour Monday to Friday via the <a href="contact.html" class="text-blue-700 font-semibold">Contact page</a>.</span></li>
+            </ul>
+          </div>
+          <div class="video-card">
+            <video controls preload="metadata" poster="../images/event-open-day.webp" width="800" height="450">
+              <source src="../media/campus-tour.mp4" type="video/mp4">
+              Your browser does not support the video element. <a href="../media/campus-tour.mp4">Download the campus tour video</a> instead.
+            </video>
+            <p class="video-caption">NOVA University virtual campus tour (placeholder clip, 10 seconds).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Housing -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Accommodation &amp; Residences</span>
+          <h2>On-Campus Student Dormitories</h2>
+          <p>Guaranteed on-campus housing for all first-year &amp; second-year scholars.</p>
+        </div>
+        <div class="grid grid-3" id="housing-grid"></div>
+      </div>
+    </section>
+
+    <!-- Clubs -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Student Engagement</span>
+          <h2>120+ Clubs &amp; Organizations</h2>
+        </div>
+        <div class="grid grid-3 grid-gap-6" id="clubs-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/icons.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/campus.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact NOVA University: send an inquiry, find campus address and opening hours, and browse the department contact directory.">
+  <title>Contact | NOVA University</title>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="contact" data-root="../">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">Connect With NOVA</span>
+        <h1>Contact &amp; Campus Directory</h1>
+        <p>Have questions about admissions, campus tours, financial aid, or academic programs? We are here to help.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Inquiry form -->
+          <div class="contact-form-card">
+            <h2><i data-icon="message-square" class="ic ic-6 text-blue"></i> Send an Inquiry</h2>
+            <p class="sub">Our university administrative team responds within 24 business hours. Fields marked * are required.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div>
+                  <label class="form-label" for="c-name">Your Full Name *</label>
+                  <input class="input input-xs" id="c-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="e.g. Eleanor Vance">
+                  <p class="field-error" id="c-name-error" aria-live="polite"></p>
+                </div>
+                <div>
+                  <label class="form-label" for="c-email">Email Address *</label>
+                  <input class="input input-xs" id="c-email" name="email" type="email" required autocomplete="email" placeholder="eleanor@example.com">
+                  <p class="field-error" id="c-email-error" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div>
+                  <label class="form-label" for="c-phone">Phone Number</label>
+                  <input class="input input-xs" id="c-phone" name="phone" type="tel" autocomplete="tel" pattern="[+0-9() -]{7,20}" title="Digits, spaces, brackets and + only" placeholder="+1 (555) 019-2831">
+                  <p class="field-error" id="c-phone-error" aria-live="polite"></p>
+                </div>
+                <div>
+                  <label class="form-label" for="c-dept">Target Department</label>
+                  <select class="select input-xs" id="c-dept" name="department">
+                    <option>Admissions &amp; Enrollment</option>
+                    <option>Financial Aid &amp; Scholarships</option>
+                    <option>International Student Services</option>
+                    <option>Campus Housing &amp; Dining</option>
+                    <option>Academic Registrar</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="form-label" for="c-subject">Subject *</label>
+                <input class="input input-xs" id="c-subject" name="subject" type="text" required minlength="4" maxlength="120" placeholder="Inquiry about B.Sc. Computer Science applications...">
+                <p class="field-error" id="c-subject-error" aria-live="polite"></p>
+              </div>
+              <div>
+                <label class="form-label" for="c-message">Your Message *</label>
+                <textarea class="textarea input-xs" id="c-message" name="message" rows="4" required minlength="20" maxlength="1000" placeholder="Please detail your question or request (at least 20 characters)..."></textarea>
+                <p class="field-error" id="c-message-error" aria-live="polite"></p>
+              </div>
+              <button type="submit" class="btn btn-navy-gold btn-xs btn-block" style="padding:0.75rem"><i data-icon="send" class="ic ic-4"></i> Send Official Inquiry</button>
+            </form>
+
+            <div class="contact-success hidden" id="contact-success">
+              <i data-icon="check-circle" class="ic ic-12"></i>
+              <h3>Inquiry Received!</h3>
+              <p id="contact-success-text"></p>
+              <button type="button" class="btn btn-navy-gold btn-xs" id="contact-again">Send Another Inquiry</button>
+            </div>
+          </div>
+
+          <!-- Address + map -->
+          <div class="contact-side">
+            <div class="hq-card">
+              <h3>Main Campus Headquarters</h3>
+              <ul>
+                <li><i data-icon="map-pin" class="ic ic-4"></i><span>100 University Boulevard, Tech Innovation Park, NY 10001</span></li>
+                <li><i data-icon="phone" class="ic ic-4"></i><span>Main Switchboard: +1 (800) 555-NOVA</span></li>
+                <li><i data-icon="clock" class="ic ic-4"></i><span>Administrative Hours: Mon - Fri (8:00 AM - 5:00 PM EST)</span></li>
+              </ul>
+            </div>
+            <div class="map-card">
+              <div class="map-preview">
+                <img src="../images/contact-map.webp" alt="Aerial view of the NOVA University campus grounds" width="800" height="600" loading="lazy">
+                <div class="map-overlay">
+                  <span class="pill pill-amber-solid">📍 Main Campus Quad</span>
+                  <span class="caption">220 Acres • 18 Academic Buildings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Directory -->
+        <div class="directory">
+          <h2 class="subsection-title" style="margin-bottom:0"><i data-icon="building" class="ic ic-6 text-blue"></i> Department Contact Directory</h2>
+          <div class="grid grid-3 grid-gap-6" id="directory-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/icons.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>

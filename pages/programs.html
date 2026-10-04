@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse NOVA University’s accredited undergraduate, graduate and doctorate programs across six faculties. Filter by faculty, degree level and delivery mode.">
+  <title>Academic Programs | NOVA University</title>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="programs" data-root="../">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">Academic Programs</span>
+        <h1>Explore Degrees &amp; Courses</h1>
+        <p>Choose from over 55 accredited undergraduate, master's, and doctorate degrees led by industry pioneers.</p>
+      </div>
+    </section>
+
+    <!-- Filter bar -->
+    <section class="filter-bar">
+      <div class="container">
+        <div class="filter-row">
+          <div class="input-wrap">
+            <i data-icon="search" class="ic ic-4 ic-lead"></i>
+            <input type="text" id="program-search" class="input" placeholder="Search by degree title, topic, or keyword...">
+            <button type="button" class="btn-clear hidden" id="program-search-clear" aria-label="Clear search"><i data-icon="x" class="ic ic-4"></i></button>
+          </div>
+
+          <div class="filter-controls">
+            <label class="filter-control">
+              <span>Degree:</span>
+              <select id="filter-level">
+                <option>All</option>
+                <option>Undergraduate</option>
+                <option>Graduate</option>
+                <option>Doctorate</option>
+              </select>
+            </label>
+            <label class="filter-control">
+              <span>Mode:</span>
+              <select id="filter-mode">
+                <option>All</option>
+                <option>On-Campus</option>
+                <option>Hybrid</option>
+                <option>Online</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="scroll-x faculty-tabs" id="faculty-tabs"></div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section-xs">
+      <div class="container">
+        <h2 class="sr-only">Program listings</h2>
+        <div class="results-bar">
+          <span>Showing <strong id="results-count">0</strong> academic programs</span>
+          <button type="button" class="btn-link hidden" id="reset-filters">Reset All Filters</button>
+        </div>
+
+        <div class="grid grid-3" id="programs-grid"></div>
+
+        <div class="empty-state hidden" id="programs-empty">
+          <i data-icon="book-open" class="ic ic-12"></i>
+          <h3>No Matching Programs Found</h3>
+          <p>Try clearing your search term or adjusting faculty and study level filters.</p>
+          <button type="button" class="btn btn-navy-gold btn-xs" id="clear-filters">Clear Filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/icons.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/programs.js"></script>
+</body>
+</html>
