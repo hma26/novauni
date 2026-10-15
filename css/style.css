@@ -817,6 +817,14 @@ p {
 /* ==========================================================================
    NAVBAR
    ========================================================================== */
+/* The header is injected into <div id="site-header">. A sticky element only
+   sticks inside its parent, so the wrapper must not create its own box –
+   otherwise the navbar scrolls away with it. */
+#site-header { display: contents; }
+
+/* Keep anchor targets (e.g. policies.html#privacy) clear of the sticky navbar */
+[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
+
 .navbar {
   position: sticky;
   top: 0;
