@@ -96,7 +96,7 @@ function renderHeader() {
 
           '<div class="nav-mobile-actions">' +
             '<button type="button" class="icon-btn" data-action="open-search" aria-label="Search">' + icon('search', 'ic ic-5') + '</button>' +
-            '<button type="button" class="icon-btn" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">' +
+            '<button type="button" class="icon-btn" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">' +
               '<span class="ic-menu">' + icon('menu', 'ic ic-6') + '</span>' +
               '<span class="ic-close hidden">' + icon('x', 'ic ic-6') + '</span>' +
             '</button>' +
@@ -115,12 +115,28 @@ function renderHeader() {
   // Mobile menu toggle
   const toggle = document.getElementById('mobile-menu-toggle');
   const menu = document.getElementById('mobile-menu');
-  toggle.addEventListener('click', function () {
-    const open = menu.classList.toggle('open');
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     toggle.querySelector('.ic-menu').classList.toggle('hidden', open);
     toggle.querySelector('.ic-close').classList.toggle('hidden', !open);
+  }
+  toggle.addEventListener('click', function () {
+    setMenu(!menu.classList.contains('open'));
   });
+  // Escape closes the menu (unless a modal is open – that has its own Escape)
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('open') && !document.body.classList.contains('modal-open')) {
+      setMenu(false);
+      toggle.focus();
+    }
+  });
+  // Reset the menu when the screen widens to the desktop navbar (1024px+)
+  const desktop = window.matchMedia('(min-width: 1024px)');
+  const onDesktop = function (e) { if (e.matches) setMenu(false); };
+  if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);
+  else desktop.addListener(onDesktop);
 }
 
 /* ==========================================================================
