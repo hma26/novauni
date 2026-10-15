@@ -590,7 +590,7 @@ function renderProgramCard(p) {
         '<span class="tag tag-white tag-br">' + escapeHtml(p.level) + '</span>' +
       '</div>' +
       '<div class="card-body">' +
-        '<h3 class="line-clamp-1">' + escapeHtml(p.title) + '</h3>' +
+        '<h3 class="line-clamp-2">' + escapeHtml(p.title) + '</h3>' +
         '<p class="desc line-clamp-2">' + escapeHtml(p.description) + '</p>' +
         '<div class="program-metrics">' +
           '<div>' + icon('clock', 'ic ic-35') + '<span>' + escapeHtml(p.duration) + '</span></div>' +
